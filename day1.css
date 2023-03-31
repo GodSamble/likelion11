@@ -1,3 +1,83 @@
-.fContainer {
-    
+*{
+    box-sizing: border-box;
+}
+/* box sizing 개념은 아직 세션에서 다루지 않았습니다만, 레이아웃 배치 시 의도와는 다르게 왜곡이 일어나는걸 방지하기 위해 
+   border-box 를 적용합니다. 후에도 css 파일 작성 시 사용하는 걸 권합니다. */
+
+body{
+    margin : 0;
+    padding : 0;
+}
+
+/* body 영역의 margin과 padding 에 0을 부여합니다. 이는 브라우저에서 보이는 전체 가시 영역을 활용하기 위함입니다. */
+
+
+
+/* 명함 영역의 윗 부분입니다. */
+.topContainer{
+
+    /* 멋사 로고 이미지 크기를 생각해 width 와 height 를 지정해줍시다. 제가 실습에 활용한 사진은 ( 2292 * 1250 )입니다. */
+
+    /* object-fit 같이 영역에 맞게 사진의 크기를 자동으로 조절하여 넣는 속성도 있지만, 설정된 영역에 침범되는걸 가장 쉽게 방지하기 위해
+    사용하려는 사진에 맞게 생각해서 width 와 height를 맞게 부여하는 방법도 있습니다. */
+    width : 2300px;
+    height: 1250px;
+
+    margin : 0 auto;
+    /* margin과 padding 은 상 우 하 좌 ( 반시계 ) 순서로 값을 줄 수 있습니다. 축약된 표현으로 2개의 값으로만 설정할 수 있는데, 차례로 상하 그리고 좌우 값을 지정합니다
+       즉, margin: 0 auto 는 좌 우 margin을  auto로 설정하여 가운데 정렬에 이용합니다.
+    */
+
+
+    /* margin을 위 아래로 넣어주어, 윗 명함 컨테이너의 상 하로 200px 씩 간격을 설정합니다. 
+     좌우 margin은 위에서 가운데 정렬을 위해 이미 설정하였습니다. */
+    margin-top:200px;
+    margin-bottom :200px;
+}
+
+img.first_img{
+    border-radius : 100px;
+    /* 테두리를 둥글게 하는 속성입니다. 크게 신경쓰지 않아도 됩니다 */
+}
+
+
+/* 명함의 아래 영역입니다. */
+.underContainer{
+    /* 배경을 검은색으로 설정하고 */
+    background-color: black;
+
+    /* 위에서 설정한 가로 세로 크기를 똑같이 설정해줍시다. */
+    width : 2300px;
+    height : 1250px;
+
+    /* 컨테이너를 가운데로 정렬하고 */
+    margin : 0 auto;
+
+    border-radius : 100px;
+
+    display : flex;
+    /* flex 컨테이너에 display : flex 속성을 부여합시다 ( 부모요소 ) */
+
+    /* justify-content 는 가로 방향 정렬입니다. */
+
+    /* space-aroud, space-evenly, space-between 등 상황에 맞게 적용시켜가며 확인해보는것도 좋습니다. */
+    justify-content: space-evenly;
+
+    /* align-items 는 수직축 방향 정렬입니다. */
+    align-items:center;
+}
+
+h1{
+    /* 기본적으로 설정된 크기가 아닌, 내 마음에 들도록 크기롤 수정할 수도 있습니다. */
+    font-size:120px;
+
+    color:white;
+    /* 배경이 검은색이니, 하얀색으로 텍스트 색깔도 바꿔줍시다. */
+}
+
+li{
+    font-size:60px;
+    margin-top: 50px;
+    /* li 내부 영역이 너무 붙어있으니,  margin-top의 약간의 값만 줘도 li 항목들이 자연스럽게 간격이 벌어지는걸 볼 수 있습니다. */
+    color:white;
 }
