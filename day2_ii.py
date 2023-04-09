@@ -16,3 +16,5 @@ for i in a_list:
         AB_cnt+=1
 
 print(A_cnt,B_cnt,O_cnt,AB_cnt)
+print("hello")
+# 깃 연습중
